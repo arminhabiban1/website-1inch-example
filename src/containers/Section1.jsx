@@ -1,4 +1,4 @@
-import { Container,Box,Stack,Typography,Button } from '@mui/material'
+import { Container,Box,Stack,Typography,Button, Hidden } from '@mui/material'
 import React from 'react'
 import {section1Content} from '../utils/content'
 import AppleIcon from '@mui/icons-material/Apple';
@@ -19,9 +19,24 @@ const CustomButton=({children})=>(
 const Section1 = () => {
   return (
    <Box>
-    <Box 
-     >
-      <img src={MainBG} alt="" style={{with:'100'}} />
+    <Box sx={{position:'fixed', zIndex:-10,top:0,left:0,right:0 }} >
+      <img src={MainBG} alt="" style={{width:'100%'}} />
+    </Box>
+    <Box sx={{position:'absolute', width:'100%',zIndex:-1,top:0,left:0,right:0 }}>
+      <img src={MainBG} alt="" style={{width:'100%' ,opacity:0}} />
+      <img src={ShootingStarImage}
+       style={{position:'absolute',
+       top:'30px',
+       right:'15%',
+       width:'500px'
+      }}
+       />
+       <Hidden mdDown >
+      <img src={TreesImage} style={{position:'absolute',width:'100%',top:0,left:0,right:0}} />
+      </Hidden>
+      <img src={CliffImage} style={{position:'absolute' ,top:0,right:0 ,backgroundSize:'cover',height:'100%'}}/>
+      <img src={HorseImage}  style={{position:'absolute' ,height:'38%' ,right:'14%', bottom:'45%',transform:'rotate(7deg)'}}/>
+      <Box sx={{bgcolor:'Background.default',position:'absolute',bottom:'0',left:0,right:0,height:'500px'}}></Box>
     </Box>
 
 
