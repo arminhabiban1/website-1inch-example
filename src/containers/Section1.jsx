@@ -12,7 +12,7 @@ const{MainBG,
   title,
   subtitle,
 }=section1Content
-const CustomButton=({children})=>(
+const CustomButton=({children })=>(
   <Button variant='outlined' sx={{borderRadius:4, color:'text.primary' ,borderColor:'text.primary' ,height:58, px:3}}>{children}</Button>
   )
 
